@@ -35,6 +35,21 @@
 		8B7A6BA52B4099A7005ABECD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B7A6BA42B4099A7005ABECD /* Preview Assets.xcassets */; };
 		8BACF1C22B45F51E00255B0B /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BACF1C12B45F51E00255B0B /* UserData.swift */; };
 		8BACF1C52B45FB2400255B0B /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BACF1C42B45FB2400255B0B /* RealmService.swift */; };
+		8BACF1C82B46120400255B0B /* RideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BACF1C72B46120400255B0B /* RideView.swift */; };
+		8BACF1CA2B46121B00255B0B /* RideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BACF1C92B46121B00255B0B /* RideViewModel.swift */; };
+		8BACF1CC2B46124100255B0B /* RideViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BACF1CB2B46124100255B0B /* RideViewAssembly.swift */; };
+		8BACF1CE2B4612D900255B0B /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BACF1CD2B4612D900255B0B /* ButtonView.swift */; };
+		8BACF1D02B46159A00255B0B /* MapViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BACF1CF2B46159A00255B0B /* MapViewAssembly.swift */; };
+		8BACF1D42B4781A200255B0B /* HistoryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BACF1D32B4781A200255B0B /* HistoryCellView.swift */; };
+		8BACF1D62B47837900255B0B /* HistoryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BACF1D52B47837900255B0B /* HistoryCellViewModel.swift */; };
+		8BACF1D82B47864D00255B0B /* TemplateRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BACF1D72B47864D00255B0B /* TemplateRoute.swift */; };
+		8BACF1DA2B478A1200255B0B /* TemplatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BACF1D92B478A1200255B0B /* TemplatesView.swift */; };
+		8BACF1DC2B478A3C00255B0B /* TemplatesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BACF1DB2B478A3C00255B0B /* TemplatesViewModel.swift */; };
+		8BACF1DF2B478C6200255B0B /* TemplateViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BACF1DE2B478C6200255B0B /* TemplateViewAssembly.swift */; };
+		8BACF1E22B4845FA00255B0B /* TemplateRideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BACF1E12B4845FA00255B0B /* TemplateRideView.swift */; };
+		8BACF1E42B48461B00255B0B /* TemplateRideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BACF1E32B48461B00255B0B /* TemplateRideViewModel.swift */; };
+		8BACF1E62B48463B00255B0B /* TemplateRideViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BACF1E52B48463B00255B0B /* TemplateRideViewAssembly.swift */; };
+		8BACF1E82B485B6900255B0B /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BACF1E72B485B6900255B0B /* CustomTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +82,22 @@
 		8B7A6BA42B4099A7005ABECD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8BACF1C12B45F51E00255B0B /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		8BACF1C42B45FB2400255B0B /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		8BACF1C72B46120400255B0B /* RideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideView.swift; sourceTree = "<group>"; };
+		8BACF1C92B46121B00255B0B /* RideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideViewModel.swift; sourceTree = "<group>"; };
+		8BACF1CB2B46124100255B0B /* RideViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideViewAssembly.swift; sourceTree = "<group>"; };
+		8BACF1CD2B4612D900255B0B /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		8BACF1CF2B46159A00255B0B /* MapViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewAssembly.swift; sourceTree = "<group>"; };
+		8BACF1D12B461A0A00255B0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8BACF1D32B4781A200255B0B /* HistoryCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCellView.swift; sourceTree = "<group>"; };
+		8BACF1D52B47837900255B0B /* HistoryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCellViewModel.swift; sourceTree = "<group>"; };
+		8BACF1D72B47864D00255B0B /* TemplateRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateRoute.swift; sourceTree = "<group>"; };
+		8BACF1D92B478A1200255B0B /* TemplatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesView.swift; sourceTree = "<group>"; };
+		8BACF1DB2B478A3C00255B0B /* TemplatesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesViewModel.swift; sourceTree = "<group>"; };
+		8BACF1DE2B478C6200255B0B /* TemplateViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateViewAssembly.swift; sourceTree = "<group>"; };
+		8BACF1E12B4845FA00255B0B /* TemplateRideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateRideView.swift; sourceTree = "<group>"; };
+		8BACF1E32B48461B00255B0B /* TemplateRideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateRideViewModel.swift; sourceTree = "<group>"; };
+		8BACF1E52B48463B00255B0B /* TemplateRideViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateRideViewAssembly.swift; sourceTree = "<group>"; };
+		8BACF1E72B485B6900255B0B /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 		C5997A34E36384DA5DB59208 /* Pods_BikeStat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BikeStat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D46165909D1BE28D7E97BF64 /* Pods-BikeStat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeStat.release.xcconfig"; path = "Target Support Files/Pods-BikeStat/Pods-BikeStat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +138,7 @@
 			children = (
 				8B2FA98D2B44E04400BB94DF /* ScoreData.swift */,
 				8B2FA98F2B44E05100BB94DF /* LocationAccessService.swift */,
+				8BACF1D72B47864D00255B0B /* TemplateRoute.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -116,6 +148,7 @@
 			children = (
 				8B2FA9922B44E06400BB94DF /* MapView.swift */,
 				8B2FA9942B44E06F00BB94DF /* MapViewModel.swift */,
+				8BACF1CF2B46159A00255B0B /* MapViewAssembly.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -143,6 +176,8 @@
 			isa = PBXGroup;
 			children = (
 				8B2FA9A32B44E0FD00BB94DF /* View+Extension.swift */,
+				8BACF1CD2B4612D900255B0B /* ButtonView.swift */,
+				8BACF1E72B485B6900255B0B /* CustomTextView.swift */,
 			);
 			path = CustomCumponents;
 			sourceTree = "<group>";
@@ -163,6 +198,10 @@
 		8B2FA9B22B44E23600BB94DF /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				8BACF1E02B4845EF00255B0B /* TempaleRideView */,
+				8BACF1DD2B478B5E00255B0B /* TemplateView */,
+				8BACF1D22B47819100255B0B /* History */,
+				8BACF1C62B4611F800255B0B /* Ride */,
 				8B2FA9B32B44E24000BB94DF /* MainView.swift */,
 				8B2FA9B52B44E24C00BB94DF /* MainViewModel.swift */,
 				8B2FA9B72B44E25900BB94DF /* MainViewAssembly.swift */,
@@ -191,6 +230,7 @@
 		8B7A6B9C2B4099A6005ABECD /* BikeStat */ = {
 			isa = PBXGroup;
 			children = (
+				8BACF1D12B461A0A00255B0B /* Info.plist */,
 				8BACF1C32B45FB1300255B0B /* Realm */,
 				8B2FA9B22B44E23600BB94DF /* Main */,
 				8B2FA9A52B44E10800BB94DF /* MainCoordinator */,
@@ -222,6 +262,45 @@
 				8BACF1C42B45FB2400255B0B /* RealmService.swift */,
 			);
 			path = Realm;
+			sourceTree = "<group>";
+		};
+		8BACF1C62B4611F800255B0B /* Ride */ = {
+			isa = PBXGroup;
+			children = (
+				8BACF1C72B46120400255B0B /* RideView.swift */,
+				8BACF1C92B46121B00255B0B /* RideViewModel.swift */,
+				8BACF1CB2B46124100255B0B /* RideViewAssembly.swift */,
+			);
+			path = Ride;
+			sourceTree = "<group>";
+		};
+		8BACF1D22B47819100255B0B /* History */ = {
+			isa = PBXGroup;
+			children = (
+				8BACF1D32B4781A200255B0B /* HistoryCellView.swift */,
+				8BACF1D52B47837900255B0B /* HistoryCellViewModel.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		8BACF1DD2B478B5E00255B0B /* TemplateView */ = {
+			isa = PBXGroup;
+			children = (
+				8BACF1DB2B478A3C00255B0B /* TemplatesViewModel.swift */,
+				8BACF1D92B478A1200255B0B /* TemplatesView.swift */,
+				8BACF1DE2B478C6200255B0B /* TemplateViewAssembly.swift */,
+			);
+			path = TemplateView;
+			sourceTree = "<group>";
+		};
+		8BACF1E02B4845EF00255B0B /* TempaleRideView */ = {
+			isa = PBXGroup;
+			children = (
+				8BACF1E12B4845FA00255B0B /* TemplateRideView.swift */,
+				8BACF1E32B48461B00255B0B /* TemplateRideViewModel.swift */,
+				8BACF1E52B48463B00255B0B /* TemplateRideViewAssembly.swift */,
+			);
+			path = TempaleRideView;
 			sourceTree = "<group>";
 		};
 		B35062B1938B2739637BF08F /* Frameworks */ = {
@@ -351,22 +430,37 @@
 				8B2FA9932B44E06400BB94DF /* MapView.swift in Sources */,
 				8B2FA9AF2B44E14200BB94DF /* ViewBaseFactory.swift in Sources */,
 				8B2FA9A12B44E0D600BB94DF /* AppCoordinatorAssembly.swift in Sources */,
+				8BACF1CE2B4612D900255B0B /* ButtonView.swift in Sources */,
 				8B2FA9A92B44E12200BB94DF /* MainRouter.swift in Sources */,
+				8BACF1C82B46120400255B0B /* RideView.swift in Sources */,
 				8B2FA99F2B44E0C600BB94DF /* AppCoordinator.swift in Sources */,
+				8BACF1D02B46159A00255B0B /* MapViewAssembly.swift in Sources */,
 				8B2FA9982B44E08C00BB94DF /* LocationService.swift in Sources */,
 				8B2FA99A2B44E09800BB94DF /* RequestService.swift in Sources */,
 				8B2FA9892B44E01D00BB94DF /* LoginViewModel.swift in Sources */,
 				8B2FA9A42B44E0FD00BB94DF /* View+Extension.swift in Sources */,
+				8BACF1CC2B46124100255B0B /* RideViewAssembly.swift in Sources */,
+				8BACF1DA2B478A1200255B0B /* TemplatesView.swift in Sources */,
+				8BACF1DF2B478C6200255B0B /* TemplateViewAssembly.swift in Sources */,
 				8B2FA98B2B44E02D00BB94DF /* LoginViewAssembly.swift in Sources */,
 				8B2FA9A72B44E11800BB94DF /* MainCoordinator.swift in Sources */,
+				8BACF1CA2B46121B00255B0B /* RideViewModel.swift in Sources */,
 				8B2FA9872B44E01000BB94DF /* LoginView.swift in Sources */,
+				8BACF1DC2B478A3C00255B0B /* TemplatesViewModel.swift in Sources */,
+				8BACF1D62B47837900255B0B /* HistoryCellViewModel.swift in Sources */,
 				8B2FA99D2B44E0B600BB94DF /* Coordinator.swift in Sources */,
+				8BACF1E22B4845FA00255B0B /* TemplateRideView.swift in Sources */,
 				8B2FA98E2B44E04400BB94DF /* ScoreData.swift in Sources */,
+				8BACF1E82B485B6900255B0B /* CustomTextView.swift in Sources */,
+				8BACF1E42B48461B00255B0B /* TemplateRideViewModel.swift in Sources */,
 				8B2FA9AB2B44E12D00BB94DF /* MainRouterState.swift in Sources */,
 				8B2FA9B82B44E25900BB94DF /* MainViewAssembly.swift in Sources */,
+				8BACF1E62B48463B00255B0B /* TemplateRideViewAssembly.swift in Sources */,
 				8BACF1C22B45F51E00255B0B /* UserData.swift in Sources */,
 				8B7A6B9E2B4099A6005ABECD /* BikeStatApp.swift in Sources */,
+				8BACF1D42B4781A200255B0B /* HistoryCellView.swift in Sources */,
 				8B2FA9952B44E06F00BB94DF /* MapViewModel.swift in Sources */,
+				8BACF1D82B47864D00255B0B /* TemplateRoute.swift in Sources */,
 				8B2FA9B12B44E14F00BB94DF /* MainCoordinatorAssembly.swift in Sources */,
 				8B2FA9AD2B44E13800BB94DF /* BaseContentLink.swift in Sources */,
 				8B2FA9B62B44E24C00BB94DF /* MainViewModel.swift in Sources */,
@@ -429,7 +523,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -486,7 +580,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -509,6 +603,9 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BikeStat/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = Test;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = Test;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -540,6 +637,9 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BikeStat/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = Test;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = Test;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

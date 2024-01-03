@@ -1,12 +1,10 @@
 import SwiftUI
 
-
-enum MainViewAssembly {
-    
+enum TemplateViewAssembly {
     static func build(_ coordinator: MainCoordinatorProtocol) -> some View {
-        let viewModel = MainViewModel()
+        let viewModel = TemplatesViewModel()
+        let view = TemplatesView(viewModel: viewModel)
         viewModel.coordinator = coordinator
-        let view = MainView(viewModel: viewModel)
         return view
     }
 }

@@ -1,5 +1,6 @@
 import SwiftUI
 
+// MARK: - MainCoordinatorAssembly
 
 enum MainCoordinatorAssembly {
     static func build(

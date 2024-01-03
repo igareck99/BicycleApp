@@ -7,6 +7,12 @@ protocol MainCoordinatorProtocol {
     func onMainTabScreen()
     
     func onLoginScreen()
+    
+    func onMapView()
+    
+    func onTemplateListView()
+    
+    func onTemplateListView(_ template: TemplateRouteEnum)
 }
 
 // MARK: - MainCoordinator
@@ -35,12 +41,12 @@ final class MainCoordinator<Router: MainRouterProtocol>: Coordinator {
     // MARK: - Private Methods
     
     private func initData() {
-        let value = UserDefaults.standard.bool(forKey: "isAuth")
-        if value {
+//        let value = UserDefaults.standard.bool(forKey: "isAuth")
+//        if value {
             self.onMainTabScreen()
-        } else {
-            self.onLoginScreen()
-        }
+//        } else {
+//            self.onLoginScreen()
+//        }
     }
 }
 
@@ -54,5 +60,17 @@ extension MainCoordinator: MainCoordinatorProtocol {
 
     func onLoginScreen() {
         router.onLoginView(self)
+    }
+    
+    func onMapView() {
+        router.onMapView((self))
+    }
+    
+    func onTemplateListView() {
+        router.onTemplateListView((self))
+    }
+    
+    func onTemplateListView(_ template: TemplateRouteEnum) {
+        router.onTemplateRideView(template, self)
     }
 }

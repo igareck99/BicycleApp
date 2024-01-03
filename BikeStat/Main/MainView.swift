@@ -10,12 +10,12 @@ struct MainView: View {
     
     var body: some View {
         content
-        .toolbar(.hidden, for: .navigationBar)
+            .toolbar(.hidden, for: .navigationBar)
     }
     
     private var content: some View {
         TabView {
-            Text("Home")
+            RideViewAssembly.build(viewModel.coordinator)
                 .tabItem {
                     Label("Поездка", systemImage: "bicycle")
                 }

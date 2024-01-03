@@ -12,6 +12,13 @@ protocol MainRouterProtocol: View {
     func onMainView(_ coordinator: MainCoordinatorProtocol)
     
     func onLoginView(_ coordinator: MainCoordinatorProtocol)
+    
+    func onMapView(_ coordinator: MainCoordinatorProtocol)
+    
+    func onTemplateListView(_ coordinator: MainCoordinatorProtocol)
+    
+    func onTemplateRideView(_ template: TemplateRouteEnum,
+                            _ coordinator: MainCoordinatorProtocol)
 }
 
 struct MainRouter<
@@ -47,5 +54,18 @@ extension MainRouter: MainRouterProtocol {
     
     func onLoginView(_ coordinator: MainCoordinatorProtocol) {
         state.path.append(BaseContentLink.authState(coordinator))
+    }
+    
+    func onMapView(_ coordinator: MainCoordinatorProtocol) {
+        state.path.append(BaseContentLink.mapView(coordinator))
+    }
+    
+    func onTemplateListView(_ coordinator: MainCoordinatorProtocol) {
+        state.path.append(BaseContentLink.templateList(coordinator))
+    }
+    
+    func onTemplateRideView(_ template: TemplateRouteEnum,
+                            _ coordinator: MainCoordinatorProtocol) {
+        state.path.append(BaseContentLink.templateRideView(coordinator, template))
     }
 }

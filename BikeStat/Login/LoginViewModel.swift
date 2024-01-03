@@ -27,14 +27,15 @@ final class LoginViewModel: ObservableObject {
     // MARK: - Private Methods
     
     private func initData() {
-        print("initData")
-        UserDefaults.standard.set(false, forKey: "isAuth")
+        userDefaults.set(false, forKey: "isAuth")
+        realmService.getUsers()
     }
     
     // MARK: - Internal Methods
     
     func checkPassword() {
         let user = realmService.filterUser(login, password)
+        print("s,alaslsa  \(user)")
         if user == 1 {
             self.isError = false
             UserDefaults.standard.set(true, forKey: "isAuth")

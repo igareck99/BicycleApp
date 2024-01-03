@@ -19,6 +19,13 @@ extension ViewsBaseFactory {
             LoginViewAssembly.build(coordinator)
         case let .tabView(coordinator):
             MainViewAssembly.build(coordinator)
+        case let .mapView(coordinator):
+            MapViewAssembly.build(coordinator)
+        case let .templateList(coordinator):
+            TemplateViewAssembly.build(coordinator)
+        case let .templateRideView(coordinator, template):
+            TemplateRideViewAssembly.build(coordinator,
+                                           template: template)
         }
     }
 }

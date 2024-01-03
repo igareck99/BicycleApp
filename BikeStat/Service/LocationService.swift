@@ -1,6 +1,6 @@
 import Foundation
 import CoreLocation
-
+import MapKit
 
 class LocationService: NSObject, CLLocationManagerDelegate, ObservableObject {
     
@@ -8,47 +8,23 @@ class LocationService: NSObject, CLLocationManagerDelegate, ObservableObject {
     @Published var currentLocation = CLLocation(latitude: 0.0, longitude: 0.0)
     var dataSizePublisher: Published<CLLocation>.Publisher { $currentLocation }
     
-
-    func requestRealTimeLocation() {
-        locationManager.requestAlwaysAuthorization()
-        locationManager.requestWhenInUseAuthorization()
+    func requestLocation() {
         locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
     }
     
-    func stopUpdatingLocation() {
-        locationManager.stopUpdatingLocation()
-    }
+//    func stopUpdatingLocation() {
+//        locationManager.stopUpdatingLocation()
+//    }
     
-    func getLocationAccessLevel() -> LocationAccessLevel {
-        let status = locationManager.authorizationStatus
-        debugPrint("requestLocationAccess: \(status)")
-        let accessLevel = locationAccessLevel(from: status)
-        return accessLevel
-    }
-    
-    private func locationAccessLevel(from status: CLAuthorizationStatus) -> LocationAccessLevel {
-        switch status {
-        case .restricted:
-            return .restricted
-        case .notDetermined:
-            return .notDetermined
-        case .denied:
-            return .denied
-        case .authorizedAlways:
-            return .authorizedAlways
-        case .authorizedWhenInUse:
-            return .authorizedWhenInUse
-        @unknown default:
-            return .notDetermined
-        }
-    }
     
     func locationManager(
         _ manager: CLLocationManager,
         didChangeAuthorization status: CLAuthorizationStatus
     ) {
-        debugPrint(status)
+        debugPrint("slkallaks  \(status)")
     }
 
     func locationManager(
@@ -58,7 +34,6 @@ class LocationService: NSObject, CLLocationManagerDelegate, ObservableObject {
         if let location = locations.last {
             let latitude = location.coordinate.latitude
             let longitude = location.coordinate.longitude
-            // print("slasas \(location)")
             self.currentLocation = location
         }
     }
@@ -67,6 +42,26 @@ class LocationService: NSObject, CLLocationManagerDelegate, ObservableObject {
         _ manager: CLLocationManager,
         didFailWithError error: Error
     ) {
-        debugPrint("Error  \(error)")
+        debugPrint("Error in location  \(error)")
+    }
+}
+
+
+@Observable
+final class NewLocationManager {
+    var location: CLLocation? = nil
+    
+    private let locationManager = CLLocationManager()
+    
+    func requestUserAuthorization() async throws {
+        locationManager.requestWhenInUseAuthorization()
+    }
+    
+    func startCurrentLocationUpdates() async throws {
+        for try await locationUpdate in CLLocationUpdate.liveUpdates() {
+            guard let location = locationUpdate.location else { return }
+
+            self.location = location
+        }
     }
 }

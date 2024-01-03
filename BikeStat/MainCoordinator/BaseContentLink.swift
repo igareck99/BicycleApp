@@ -6,6 +6,10 @@ enum BaseContentLink: Hashable, Identifiable {
     
     case authState(_ coordinator: MainCoordinatorProtocol)
     case tabView(_ coordinator: MainCoordinatorProtocol)
+    case mapView(_ coordinator: MainCoordinatorProtocol)
+    case templateList(_ coordinator: MainCoordinatorProtocol)
+    case templateRideView(_ coordinator: MainCoordinatorProtocol,
+                          _ template: TemplateRouteEnum)
     
     // MARK: - Hashable, Identifiable
     

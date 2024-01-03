@@ -1,5 +1,6 @@
 import Foundation
 
+// MARK: - MainViewModel
 
 final class MainViewModel: ObservableObject {
     
@@ -9,7 +10,6 @@ final class MainViewModel: ObservableObject {
     
     init(requestService: RequestService = RequestService.shared ) {
         self.requestService = requestService
-        self.getTechData()
     }
     
     func getTechData() {
