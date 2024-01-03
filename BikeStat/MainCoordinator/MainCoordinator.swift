@@ -35,8 +35,7 @@ final class MainCoordinator<Router: MainRouterProtocol>: Coordinator {
     // MARK: - Private Methods
     
     private func initData() {
-        let value: Bool = userDefaults.object(forKey: "isAuth") as? Bool ?? false
-        print("s,aslaslk  \(value)")
+        let value = UserDefaults.standard.bool(forKey: "isAuth")
         if value {
             self.onMainTabScreen()
         } else {

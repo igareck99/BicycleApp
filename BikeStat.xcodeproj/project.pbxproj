@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58F834D803751D8E3195A039 /* Pods_BikeStat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5997A34E36384DA5DB59208 /* Pods_BikeStat.framework */; };
 		8B2FA9872B44E01000BB94DF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2FA9862B44E01000BB94DF /* LoginView.swift */; };
 		8B2FA9892B44E01D00BB94DF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2FA9882B44E01D00BB94DF /* LoginViewModel.swift */; };
 		8B2FA98B2B44E02D00BB94DF /* LoginViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2FA98A2B44E02D00BB94DF /* LoginViewAssembly.swift */; };
@@ -32,9 +33,12 @@
 		8B7A6B9E2B4099A6005ABECD /* BikeStatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7A6B9D2B4099A6005ABECD /* BikeStatApp.swift */; };
 		8B7A6BA22B4099A7005ABECD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B7A6BA12B4099A7005ABECD /* Assets.xcassets */; };
 		8B7A6BA52B4099A7005ABECD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B7A6BA42B4099A7005ABECD /* Preview Assets.xcassets */; };
+		8BACF1C22B45F51E00255B0B /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BACF1C12B45F51E00255B0B /* UserData.swift */; };
+		8BACF1C52B45FB2400255B0B /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BACF1C42B45FB2400255B0B /* RealmService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47F2A8A57C763BC0F1ABA87C /* Pods-BikeStat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeStat.debug.xcconfig"; path = "Target Support Files/Pods-BikeStat/Pods-BikeStat.debug.xcconfig"; sourceTree = "<group>"; };
 		8B2FA9862B44E01000BB94DF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		8B2FA9882B44E01D00BB94DF /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		8B2FA98A2B44E02D00BB94DF /* LoginViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewAssembly.swift; sourceTree = "<group>"; };
@@ -61,6 +65,10 @@
 		8B7A6B9D2B4099A6005ABECD /* BikeStatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeStatApp.swift; sourceTree = "<group>"; };
 		8B7A6BA12B4099A7005ABECD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B7A6BA42B4099A7005ABECD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8BACF1C12B45F51E00255B0B /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		8BACF1C42B45FB2400255B0B /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		C5997A34E36384DA5DB59208 /* Pods_BikeStat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BikeStat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D46165909D1BE28D7E97BF64 /* Pods-BikeStat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeStat.release.xcconfig"; path = "Target Support Files/Pods-BikeStat/Pods-BikeStat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,12 +76,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58F834D803751D8E3195A039 /* Pods_BikeStat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2EB41E38D67AA1120813A07F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				47F2A8A57C763BC0F1ABA87C /* Pods-BikeStat.debug.xcconfig */,
+				D46165909D1BE28D7E97BF64 /* Pods-BikeStat.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8B2FA9852B44E00800BB94DF /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +175,8 @@
 			children = (
 				8B7A6B9C2B4099A6005ABECD /* BikeStat */,
 				8B7A6B9B2B4099A6005ABECD /* Products */,
+				2EB41E38D67AA1120813A07F /* Pods */,
+				B35062B1938B2739637BF08F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -171,6 +191,7 @@
 		8B7A6B9C2B4099A6005ABECD /* BikeStat */ = {
 			isa = PBXGroup;
 			children = (
+				8BACF1C32B45FB1300255B0B /* Realm */,
 				8B2FA9B22B44E23600BB94DF /* Main */,
 				8B2FA9A52B44E10800BB94DF /* MainCoordinator */,
 				8B2FA9A22B44E0E100BB94DF /* CustomCumponents */,
@@ -194,6 +215,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		8BACF1C32B45FB1300255B0B /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				8BACF1C12B45F51E00255B0B /* UserData.swift */,
+				8BACF1C42B45FB2400255B0B /* RealmService.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		B35062B1938B2739637BF08F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5997A34E36384DA5DB59208 /* Pods_BikeStat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -201,9 +239,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B7A6BA82B4099A7005ABECD /* Build configuration list for PBXNativeTarget "BikeStat" */;
 			buildPhases = (
+				D5A177F1DDFD9B1B51CA6DF0 /* [CP] Check Pods Manifest.lock */,
 				8B7A6B962B4099A6005ABECD /* Sources */,
 				8B7A6B972B4099A6005ABECD /* Frameworks */,
 				8B7A6B982B4099A6005ABECD /* Resources */,
+				11DB4A0E6632CF0C4444E940 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -259,6 +299,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		11DB4A0E6632CF0C4444E940 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BikeStat/Pods-BikeStat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BikeStat/Pods-BikeStat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BikeStat/Pods-BikeStat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5A177F1DDFD9B1B51CA6DF0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BikeStat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8B7A6B962B4099A6005ABECD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -282,11 +364,13 @@
 				8B2FA98E2B44E04400BB94DF /* ScoreData.swift in Sources */,
 				8B2FA9AB2B44E12D00BB94DF /* MainRouterState.swift in Sources */,
 				8B2FA9B82B44E25900BB94DF /* MainViewAssembly.swift in Sources */,
+				8BACF1C22B45F51E00255B0B /* UserData.swift in Sources */,
 				8B7A6B9E2B4099A6005ABECD /* BikeStatApp.swift in Sources */,
 				8B2FA9952B44E06F00BB94DF /* MapViewModel.swift in Sources */,
 				8B2FA9B12B44E14F00BB94DF /* MainCoordinatorAssembly.swift in Sources */,
 				8B2FA9AD2B44E13800BB94DF /* BaseContentLink.swift in Sources */,
 				8B2FA9B62B44E24C00BB94DF /* MainViewModel.swift in Sources */,
+				8BACF1C52B45FB2400255B0B /* RealmService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +498,7 @@
 		};
 		8B7A6BA92B4099A7005ABECD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47F2A8A57C763BC0F1ABA87C /* Pods-BikeStat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -422,6 +507,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BikeStat/Preview Content\"";
 				DEVELOPMENT_TEAM = 63RB2V788Z;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -443,6 +529,7 @@
 		};
 		8B7A6BAA2B4099A7005ABECD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D46165909D1BE28D7E97BF64 /* Pods-BikeStat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -451,6 +538,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BikeStat/Preview Content\"";
 				DEVELOPMENT_TEAM = 63RB2V788Z;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
