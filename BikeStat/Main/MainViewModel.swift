@@ -11,10 +11,4 @@ final class MainViewModel: ObservableObject {
     init(requestService: RequestService = RequestService.shared ) {
         self.requestService = requestService
     }
-    
-    func getTechData() {
-        Task {
-            let result = await requestService.getRequest("https://dt.miet.ru/ppo_it/api/watch/")
-        }
-    }
 }

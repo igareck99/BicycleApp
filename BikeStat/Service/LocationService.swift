@@ -7,6 +7,7 @@ class LocationService: NSObject, CLLocationManagerDelegate, ObservableObject {
     let locationManager = CLLocationManager()
     @Published var currentLocation = CLLocation(latitude: 0.0, longitude: 0.0)
     var dataSizePublisher: Published<CLLocation>.Publisher { $currentLocation }
+    static let shared = LocationService()
     
     func requestLocation() {
         locationManager.delegate = self

@@ -5,12 +5,8 @@ import MapKit
 
 final class MapViewModel: ObservableObject {
     
-    var locationService = LocationService()
-    var newlocationManager = NewLocationManager()
-    @Published var startingPoint = CLLocationCoordinate2D(latitude: 55.96875954463992,
-                                                          longitude: 37.13258993529138)
-    @Published var endPoint = CLLocationCoordinate2D(latitude: 56.038462259893365,
-                                                     longitude: 37.232012341263435)
+    let locationService: LocationService
+    let requestService: RequestService
     @Published var currentPosition = CLLocationCoordinate2D(
         latitude: 0.0,
         longitude: 0.0
@@ -19,44 +15,58 @@ final class MapViewModel: ObservableObject {
     @Published var distance = "0 метров"
     @Published var speed = CLLocationSpeed(0)
     @Published var isStart = false
+    @Published var timeString = "00:00"
+    @Published var speedString = "0"
+    private var pulse: Pulse?
     private var totalSpeed = CLLocationSpeed(0)
     private var counts: Int = 0
+    private var timeSeconds: TimeInterval = 0
     var coordinator: MainCoordinatorProtocol?
     private var subscriptions = Set<AnyCancellable>()
     
-    init() {
+    init(locationService: LocationService = LocationService(),
+         requestService: RequestService = RequestService()) {
+        self.locationService = locationService
+        self.requestService = requestService
         self.initLocation()
         self.bindInput()
-        self.fire()
     }
     
     func fire() {
         let timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { timer in
-            print("Таймер!  \(timer.timeInterval)")
+            self.timeSeconds += timer.timeInterval
+            self.timeString =  self.timeSeconds.hourMinuteSecond
         })
     }
     
-    func getDirections() {
-        let request = MKDirections.Request()
-        request.source = MKMapItem(placemark: MKPlacemark(coordinate: startingPoint))
-        request.destination = MKMapItem(placemark: MKPlacemark(coordinate: endPoint))
-        request.transportType = .walking
-        request.tollPreference = .any
-        let directions = MKDirections(request: request)
-        directions.calculate { response, error in
-            guard let unwrappedResponse = response?.routes.first else { return }
-            self.route = unwrappedResponse
-            self.distance = String(self.route?.distance ?? 0) + " метров"
-        }
-    }
-    
     func computeResult() {
-        print("totalSpeed  \(totalSpeed / Double(counts))")
+        getTechData()
     }
     
     // MARK: - Private Methods
     
+    private func getTechData() {
+        Task {
+            let result = await requestService.getRequest("https://dt.miet.ru/ppo_it/api/watch/")
+            guard let data = result?["data"] as? [String: Any] else { return }
+            guard let p = data["pulse"] as? [String: Int] else { return }
+            self.pulse = Pulse(minValue: p["min"] ?? 0,
+                               averageValue: p["avg"] ?? 0,
+                               maxValue: p["max"] ?? 0)
+        }
+    }
+    
     private func bindInput() {
+        $isStart
+            .subscribe(on: DispatchQueue.main)
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] value in
+                if value {
+                    self?.fire()
+                }
+                
+            }
+            .store(in: &subscriptions)
         locationService.dataSizePublisher
             .subscribe(on: DispatchQueue.global(qos: .userInitiated))
             .receive(on: DispatchQueue.main)
@@ -64,9 +74,13 @@ final class MapViewModel: ObservableObject {
                 guard let self = self else { return }
                 self.currentPosition = CLLocationCoordinate2D(latitude: value.coordinate.latitude,
                                                              longitude: value.coordinate.longitude)
+                if !self.isStart {
+                    return
+                }
                 self.counts += 1
-                self.speed = self.speed
-                
+                self.totalSpeed += value.speed * 3.6
+                self.speed = value.speed * 3.6
+                self.speedString = String(format: "%.2f", self.speed)
             }
             .store(in: &subscriptions)
     }

@@ -14,7 +14,9 @@ final class RequestService {
                 request.setValue("az4fvf7nzi1XPIsYiMEu", forHTTPHeaderField: "x-access-tokens")
                 request.httpMethod = "GET"
                 let(data, response) = try await URLSession.shared.data(for: request)
-                print("slasl  \(data)  \(response)")
+                let result = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String:Any]
+                print("dlalsals  \(result)")
+                return result
             } catch {
                 print("GET Request Failed:", error)
             }
