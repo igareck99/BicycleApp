@@ -39,4 +39,8 @@ class RealmService: RealmServiceProtocol {
         users = realm.objects(UserData.self)
         return users
     }
+    
+    func saveRideData() {
+        
+    }
 }

@@ -12,8 +12,9 @@ final class MapViewModel: ObservableObject {
         longitude: 0.0
     )
     @Published var route: MKRoute?
-    @Published var distance = "0 метров"
+    @Published var distance = 0.0
     @Published var speed = CLLocationSpeed(0)
+//    @Published var distance = 0.0
     @Published var isStart = false
     @Published var timeString = "00:00"
     @Published var speedString = "0"
@@ -21,6 +22,7 @@ final class MapViewModel: ObservableObject {
     private var totalSpeed = CLLocationSpeed(0)
     private var counts: Int = 0
     private var timeSeconds: TimeInterval = 0
+    private var mediumSpeed = 0.0
     var coordinator: MainCoordinatorProtocol?
     private var subscriptions = Set<AnyCancellable>()
     
@@ -41,6 +43,7 @@ final class MapViewModel: ObservableObject {
     
     func computeResult() {
         getTechData()
+        mediumSpeed = totalSpeed / Double(counts)
     }
     
     // MARK: - Private Methods
@@ -72,6 +75,12 @@ final class MapViewModel: ObservableObject {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] value in
                 guard let self = self else { return }
+                if self.currentPosition.latitude == 0.0 && self.currentPosition.longitude == 0.0 {
+                    
+                } else {
+                    self.computeDistance(self.currentPosition,
+                                         value.coordinate)
+                }
                 self.currentPosition = CLLocationCoordinate2D(latitude: value.coordinate.latitude,
                                                              longitude: value.coordinate.longitude)
                 if !self.isStart {
@@ -83,6 +92,14 @@ final class MapViewModel: ObservableObject {
                 self.speedString = String(format: "%.2f", self.speed)
             }
             .store(in: &subscriptions)
+    }
+    
+    private func computeDistance(_ coordinate1: CLLocationCoordinate2D,
+                                 _ coordinate2: CLLocationCoordinate2D) {
+        let coordinate1 = CLLocation(latitude: coordinate1.latitude, longitude: coordinate1.longitude)
+        let coordinate2 = CLLocation(latitude: coordinate2.latitude, longitude: coordinate2.longitude)
+        let distanceInMeters = coordinate1.distance(from: coordinate2)
+        self.distance += distanceInMeters
     }
     
     private func initLocation() {

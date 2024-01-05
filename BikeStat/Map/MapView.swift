@@ -17,7 +17,7 @@ struct MapView: View {
     }
     
     private var labels: some View {
-        VStack(spacing: 8) {
+        VStack(spacing: 12) {
             ButtonView(title: viewModel.isStart ? "Завершить поездку" : "Начать", colors: [.blue, .blue]) {
                 if !viewModel.isStart {
                     viewModel.isStart.toggle()
@@ -35,6 +35,10 @@ struct MapView: View {
                              title: viewModel.speedString + " км/ч",
                              foregroundColor: .black)
             }
+            CurrencyView(width: (UIScreen.main.bounds.width - 48) / 2,
+                         height: 44, backgroundColor: .white,
+                         title: String(Int(viewModel.distance)) + " метров",
+                         foregroundColor: .black)
         }
     }
 }
