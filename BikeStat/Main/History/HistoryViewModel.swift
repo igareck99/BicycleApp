@@ -1,10 +1,12 @@
 import Foundation
+import RealmSwift
 
 // MARK: - HistoryViewModel
 
 final class HistoryViewModel: ObservableObject {
     
     let realmService: RealmServiceProtocol
+    @Published var rides: [RideRealmData] = []
     
     init(realmService: RealmServiceProtocol = RealmService.shared) {
         self.realmService = realmService
@@ -12,6 +14,7 @@ final class HistoryViewModel: ObservableObject {
     }
     
     private func initData() {
-       print("slkalaskl  \(realmService.getRideData())")
+        self.rides = realmService.getRideData()
+        
     }
 }

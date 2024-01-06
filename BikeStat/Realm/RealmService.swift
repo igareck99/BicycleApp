@@ -10,7 +10,7 @@ protocol RealmServiceProtocol {
     
     func saveRideData(_ data: RideData) -> Results<RideRealmData>?
     
-    func getRideData() -> Results<RideRealmData>?
+    func getRideData() -> [RideRealmData]
 }
 
 class RealmService: RealmServiceProtocol {
@@ -67,9 +67,9 @@ class RealmService: RealmServiceProtocol {
         return result
     }
     
-    func getRideData() -> Results<RideRealmData>? {
+    func getRideData() -> [RideRealmData] {
         let realm = try! Realm()
         let result = realm.objects(RideRealmData.self)
-        return result
+        return Array(result)
     }
 }

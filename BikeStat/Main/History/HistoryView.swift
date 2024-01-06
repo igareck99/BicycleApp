@@ -8,6 +8,9 @@ struct HistoryView: View {
     var body: some View {
         List {
             Text("История")
+            ForEach(viewModel.realmService.getRideData(), id: \.self) { value in
+                HistoryCellView(viewModel: HistoryCellViewModel(template: value))
+            }
         }
         .listStyle(.inset)
     }
