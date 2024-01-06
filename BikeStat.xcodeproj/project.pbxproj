@@ -34,6 +34,12 @@
 		8B7A6BA22B4099A7005ABECD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B7A6BA12B4099A7005ABECD /* Assets.xcassets */; };
 		8B7A6BA52B4099A7005ABECD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B7A6BA42B4099A7005ABECD /* Preview Assets.xcassets */; };
 		8BA172542B48AC5C00908FA1 /* Pulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA172532B48AC5C00908FA1 /* Pulse.swift */; };
+		8BA172562B4A06DE00908FA1 /* RideData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA172552B4A06DE00908FA1 /* RideData.swift */; };
+		8BA172582B4A0C0800908FA1 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA172572B4A0C0800908FA1 /* HistoryView.swift */; };
+		8BA1725A2B4A0C0F00908FA1 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA172592B4A0C0F00908FA1 /* HistoryViewModel.swift */; };
+		8BA1725C2B4A0C8800908FA1 /* HistoryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA1725B2B4A0C8800908FA1 /* HistoryAssembly.swift */; };
+		8BA172602B4A0E6C00908FA1 /* HistoryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA1725F2B4A0E6C00908FA1 /* HistoryCellView.swift */; };
+		8BA172622B4A0E7700908FA1 /* HistoryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA172612B4A0E7700908FA1 /* HistoryCellViewModel.swift */; };
 		8BACF1C22B45F51E00255B0B /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BACF1C12B45F51E00255B0B /* UserData.swift */; };
 		8BACF1C52B45FB2400255B0B /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BACF1C42B45FB2400255B0B /* RealmService.swift */; };
 		8BACF1C82B46120400255B0B /* RideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BACF1C72B46120400255B0B /* RideView.swift */; };
@@ -41,8 +47,8 @@
 		8BACF1CC2B46124100255B0B /* RideViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BACF1CB2B46124100255B0B /* RideViewAssembly.swift */; };
 		8BACF1CE2B4612D900255B0B /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BACF1CD2B4612D900255B0B /* ButtonView.swift */; };
 		8BACF1D02B46159A00255B0B /* MapViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BACF1CF2B46159A00255B0B /* MapViewAssembly.swift */; };
-		8BACF1D42B4781A200255B0B /* HistoryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BACF1D32B4781A200255B0B /* HistoryCellView.swift */; };
-		8BACF1D62B47837900255B0B /* HistoryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BACF1D52B47837900255B0B /* HistoryCellViewModel.swift */; };
+		8BACF1D42B4781A200255B0B /* HistoryTemplateCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BACF1D32B4781A200255B0B /* HistoryTemplateCellView.swift */; };
+		8BACF1D62B47837900255B0B /* HistoryTemplateCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BACF1D52B47837900255B0B /* HistoryTemplateCellViewModel.swift */; };
 		8BACF1D82B47864D00255B0B /* TemplateRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BACF1D72B47864D00255B0B /* TemplateRoute.swift */; };
 		8BACF1DA2B478A1200255B0B /* TemplatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BACF1D92B478A1200255B0B /* TemplatesView.swift */; };
 		8BACF1DC2B478A3C00255B0B /* TemplatesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BACF1DB2B478A3C00255B0B /* TemplatesViewModel.swift */; };
@@ -83,6 +89,12 @@
 		8B7A6BA12B4099A7005ABECD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B7A6BA42B4099A7005ABECD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8BA172532B48AC5C00908FA1 /* Pulse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pulse.swift; sourceTree = "<group>"; };
+		8BA172552B4A06DE00908FA1 /* RideData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideData.swift; sourceTree = "<group>"; };
+		8BA172572B4A0C0800908FA1 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		8BA172592B4A0C0F00908FA1 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		8BA1725B2B4A0C8800908FA1 /* HistoryAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryAssembly.swift; sourceTree = "<group>"; };
+		8BA1725F2B4A0E6C00908FA1 /* HistoryCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCellView.swift; sourceTree = "<group>"; };
+		8BA172612B4A0E7700908FA1 /* HistoryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCellViewModel.swift; sourceTree = "<group>"; };
 		8BACF1C12B45F51E00255B0B /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		8BACF1C42B45FB2400255B0B /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		8BACF1C72B46120400255B0B /* RideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideView.swift; sourceTree = "<group>"; };
@@ -91,8 +103,8 @@
 		8BACF1CD2B4612D900255B0B /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		8BACF1CF2B46159A00255B0B /* MapViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewAssembly.swift; sourceTree = "<group>"; };
 		8BACF1D12B461A0A00255B0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		8BACF1D32B4781A200255B0B /* HistoryCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCellView.swift; sourceTree = "<group>"; };
-		8BACF1D52B47837900255B0B /* HistoryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCellViewModel.swift; sourceTree = "<group>"; };
+		8BACF1D32B4781A200255B0B /* HistoryTemplateCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTemplateCellView.swift; sourceTree = "<group>"; };
+		8BACF1D52B47837900255B0B /* HistoryTemplateCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTemplateCellViewModel.swift; sourceTree = "<group>"; };
 		8BACF1D72B47864D00255B0B /* TemplateRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateRoute.swift; sourceTree = "<group>"; };
 		8BACF1D92B478A1200255B0B /* TemplatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesView.swift; sourceTree = "<group>"; };
 		8BACF1DB2B478A3C00255B0B /* TemplatesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesViewModel.swift; sourceTree = "<group>"; };
@@ -266,6 +278,7 @@
 			children = (
 				8BACF1C12B45F51E00255B0B /* UserData.swift */,
 				8BACF1C42B45FB2400255B0B /* RealmService.swift */,
+				8BA172552B4A06DE00908FA1 /* RideData.swift */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -283,8 +296,11 @@
 		8BACF1D22B47819100255B0B /* History */ = {
 			isa = PBXGroup;
 			children = (
-				8BACF1D32B4781A200255B0B /* HistoryCellView.swift */,
-				8BACF1D52B47837900255B0B /* HistoryCellViewModel.swift */,
+				8BA172572B4A0C0800908FA1 /* HistoryView.swift */,
+				8BA172592B4A0C0F00908FA1 /* HistoryViewModel.swift */,
+				8BA1725B2B4A0C8800908FA1 /* HistoryAssembly.swift */,
+				8BA1725F2B4A0E6C00908FA1 /* HistoryCellView.swift */,
+				8BA172612B4A0E7700908FA1 /* HistoryCellViewModel.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -293,6 +309,8 @@
 			isa = PBXGroup;
 			children = (
 				8BACF1DB2B478A3C00255B0B /* TemplatesViewModel.swift */,
+				8BACF1D32B4781A200255B0B /* HistoryTemplateCellView.swift */,
+				8BACF1D52B47837900255B0B /* HistoryTemplateCellViewModel.swift */,
 				8BACF1D92B478A1200255B0B /* TemplatesView.swift */,
 				8BACF1DE2B478C6200255B0B /* TemplateViewAssembly.swift */,
 			);
@@ -436,12 +454,15 @@
 				8B2FA9932B44E06400BB94DF /* MapView.swift in Sources */,
 				8B2FA9AF2B44E14200BB94DF /* ViewBaseFactory.swift in Sources */,
 				8B2FA9A12B44E0D600BB94DF /* AppCoordinatorAssembly.swift in Sources */,
+				8BA172582B4A0C0800908FA1 /* HistoryView.swift in Sources */,
 				8BACF1CE2B4612D900255B0B /* ButtonView.swift in Sources */,
 				8B2FA9A92B44E12200BB94DF /* MainRouter.swift in Sources */,
 				8BACF1C82B46120400255B0B /* RideView.swift in Sources */,
 				8B2FA99F2B44E0C600BB94DF /* AppCoordinator.swift in Sources */,
+				8BA1725A2B4A0C0F00908FA1 /* HistoryViewModel.swift in Sources */,
 				8BACF1D02B46159A00255B0B /* MapViewAssembly.swift in Sources */,
 				8B2FA9982B44E08C00BB94DF /* LocationService.swift in Sources */,
+				8BA172602B4A0E6C00908FA1 /* HistoryCellView.swift in Sources */,
 				8B2FA99A2B44E09800BB94DF /* RequestService.swift in Sources */,
 				8B2FA9892B44E01D00BB94DF /* LoginViewModel.swift in Sources */,
 				8B2FA9A42B44E0FD00BB94DF /* View+Extension.swift in Sources */,
@@ -453,22 +474,25 @@
 				8BACF1CA2B46121B00255B0B /* RideViewModel.swift in Sources */,
 				8B2FA9872B44E01000BB94DF /* LoginView.swift in Sources */,
 				8BACF1DC2B478A3C00255B0B /* TemplatesViewModel.swift in Sources */,
-				8BACF1D62B47837900255B0B /* HistoryCellViewModel.swift in Sources */,
+				8BACF1D62B47837900255B0B /* HistoryTemplateCellViewModel.swift in Sources */,
 				8B2FA99D2B44E0B600BB94DF /* Coordinator.swift in Sources */,
 				8BACF1E22B4845FA00255B0B /* TemplateRideView.swift in Sources */,
 				8B2FA98E2B44E04400BB94DF /* ScoreData.swift in Sources */,
 				8BACF1E82B485B6900255B0B /* CustomTextView.swift in Sources */,
 				8BACF1E42B48461B00255B0B /* TemplateRideViewModel.swift in Sources */,
+				8BA1725C2B4A0C8800908FA1 /* HistoryAssembly.swift in Sources */,
 				8B2FA9AB2B44E12D00BB94DF /* MainRouterState.swift in Sources */,
 				8B2FA9B82B44E25900BB94DF /* MainViewAssembly.swift in Sources */,
 				8BACF1E62B48463B00255B0B /* TemplateRideViewAssembly.swift in Sources */,
+				8BA172622B4A0E7700908FA1 /* HistoryCellViewModel.swift in Sources */,
 				8BACF1C22B45F51E00255B0B /* UserData.swift in Sources */,
 				8BACF1EA2B48A29800255B0B /* TimeInterval+Extension.swift in Sources */,
 				8B7A6B9E2B4099A6005ABECD /* BikeStatApp.swift in Sources */,
-				8BACF1D42B4781A200255B0B /* HistoryCellView.swift in Sources */,
+				8BACF1D42B4781A200255B0B /* HistoryTemplateCellView.swift in Sources */,
 				8B2FA9952B44E06F00BB94DF /* MapViewModel.swift in Sources */,
 				8BACF1D82B47864D00255B0B /* TemplateRoute.swift in Sources */,
 				8B2FA9B12B44E14F00BB94DF /* MainCoordinatorAssembly.swift in Sources */,
+				8BA172562B4A06DE00908FA1 /* RideData.swift in Sources */,
 				8B2FA9AD2B44E13800BB94DF /* BaseContentLink.swift in Sources */,
 				8BA172542B48AC5C00908FA1 /* Pulse.swift in Sources */,
 				8B2FA9B62B44E24C00BB94DF /* MainViewModel.swift in Sources */,

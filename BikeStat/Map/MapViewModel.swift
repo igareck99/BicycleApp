@@ -7,6 +7,7 @@ final class MapViewModel: ObservableObject {
     
     let locationService: LocationService
     let requestService: RequestService
+    let realmService: RealmServiceProtocol
     @Published var currentPosition = CLLocationCoordinate2D(
         latitude: 0.0,
         longitude: 0.0
@@ -27,15 +28,20 @@ final class MapViewModel: ObservableObject {
     private var subscriptions = Set<AnyCancellable>()
     
     init(locationService: LocationService = LocationService(),
-         requestService: RequestService = RequestService()) {
+         requestService: RequestService = RequestService(),
+         realmService: RealmServiceProtocol = RealmService.shared) {
         self.locationService = locationService
         self.requestService = requestService
+        self.realmService = realmService
         self.initLocation()
         self.bindInput()
     }
     
     func fire() {
         let timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { timer in
+            if !self.isStart {
+                return
+            }
             self.timeSeconds += timer.timeInterval
             self.timeString =  self.timeSeconds.hourMinuteSecond
         })
@@ -56,6 +62,14 @@ final class MapViewModel: ObservableObject {
             self.pulse = Pulse(minValue: p["min"] ?? 0,
                                averageValue: p["avg"] ?? 0,
                                maxValue: p["max"] ?? 0)
+            if let pulse = pulse {
+                print("saslaslaslk")
+                let data = RideData(distance: distance, duration: timeSeconds, middleSpeed: mediumSpeed,
+                                    minPulse: pulse.minValue, middlePulse: pulse.averageValue,
+                                    maxPulse: pulse.maxValue, countedDiff: 1, realDiff: 1, startLongtitued: currentPosition.longitude, startLattitude: currentPosition.latitude, endLongtitude: currentPosition.longitude, endLattitude: currentPosition.latitude)
+                realmService.saveRideData(data)
+                print("slaslaskl  \(realmService.getRideData())")
+            }
         }
     }
     

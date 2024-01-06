@@ -7,6 +7,10 @@ protocol RealmServiceProtocol {
     
     func filterUser(_ login: String,
                     _ password: String) -> Int
+    
+    func saveRideData(_ data: RideData) -> Results<RideRealmData>?
+    
+    func getRideData() -> Results<RideRealmData>?
 }
 
 class RealmService: RealmServiceProtocol {
@@ -40,7 +44,32 @@ class RealmService: RealmServiceProtocol {
         return users
     }
     
-    func saveRideData() {
-        
+    func saveRideData(_ data: RideData) -> Results<RideRealmData>? {
+        let realm = try! Realm()
+        var object = RideRealmData()
+        object._id = data.id
+        object.distance = data.distance
+        object.duration = data.duration
+        object.middleSpeed = data.middleSpeed
+        object.minPulse = data.minPulse
+        object.middlePulse = data.middlePulse
+        object.maxPulse = data.maxPulse
+        object.countedDiff = data.countedDiff
+        object.realDiff = data.realDiff
+        object.startLongtitude = data.startLongtitued
+        object.startLattitude = data.startLattitude
+        object.endLongtitude = data.endLongtitude
+        object.endLattitude = data.endLattitude
+        try! realm.write {
+            realm.add(object)
+        }
+        let result = realm.objects(RideRealmData.self)
+        return result
+    }
+    
+    func getRideData() -> Results<RideRealmData>? {
+        let realm = try! Realm()
+        let result = realm.objects(RideRealmData.self)
+        return result
     }
 }

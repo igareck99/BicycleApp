@@ -7,8 +7,8 @@ struct TemplatesView: View {
     var body: some View {
         List {
             ForEach(viewModel.items, id: \.self) { value in
-                let vm = HistoryCellViewModel(template: value)
-                HistoryCellView(viewModel: vm)
+                let vm = HistoryTemplateCellViewModel(template: value)
+                HistoryTemplateCellView(viewModel: vm)
                     .onTapGesture {
                         viewModel.coordinator?.onTemplateListView(value)
                     }

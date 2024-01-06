@@ -19,7 +19,7 @@ struct MainView: View {
                 .tabItem {
                     Label("Поездка", systemImage: "bicycle")
                 }
-            Text("История")
+            HistoryAssembly.build()
                 .tabItem {
                     Label("История", systemImage: "list.clipboard")
                 }
