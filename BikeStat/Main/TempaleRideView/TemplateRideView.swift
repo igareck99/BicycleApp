@@ -12,6 +12,16 @@ struct TemplateRideView: View {
             Map(interactionModes: [.all]) {
                 Marker("Start", coordinate: viewModel.data.startPoint)
                 Marker("End", coordinate: viewModel.data.endPoint)
+                Annotation(
+                    "Sign-in",
+                    coordinate: viewModel.currentPosition,
+                    anchor: .bottom
+                ) {
+                    Image(systemName: "bicycle")
+                        .padding(4)
+                        .foregroundStyle(.red)
+                        .cornerRadius(4)
+                }
                 if let route = viewModel.route {
                     MapPolyline(route)
                         .stroke(.green, lineWidth: 4)

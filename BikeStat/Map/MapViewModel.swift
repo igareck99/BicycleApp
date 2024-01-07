@@ -15,7 +15,6 @@ final class MapViewModel: ObservableObject {
     @Published var route: MKRoute?
     @Published var distance = 0.0
     @Published var speed = CLLocationSpeed(0)
-//    @Published var distance = 0.0
     @Published var isStart = false
     @Published var timeString = "00:00"
     @Published var speedString = "0"

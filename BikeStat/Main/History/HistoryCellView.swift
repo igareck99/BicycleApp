@@ -28,9 +28,6 @@ struct HistoryCellView: View {
                 Text("Рассчетная сложность: \(viewModel.getCountableLevel())")
                 Text("Реальная сложность: \(viewModel.getLevel())")
                 Text("Время поездки \(viewModel.template.duration.hourMinuteSecond)")
-//                Text("\(viewModel.distance)")
-//                Text("Длительность \(viewModel.time)")
-//                Text("Сложность \(viewModel.getLevel())")
             }
         })
         .background(content: {
