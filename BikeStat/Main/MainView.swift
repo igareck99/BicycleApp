@@ -23,6 +23,10 @@ struct MainView: View {
                 .tabItem {
                     Label("История", systemImage: "list.clipboard")
                 }
+            ChartsViewAssembly.build()
+                .tabItem {
+                    Label("Статистика", systemImage: "chart.xyaxis.line")
+                }
         }
     }
 }

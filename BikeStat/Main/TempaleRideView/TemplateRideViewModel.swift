@@ -59,7 +59,6 @@ final class TemplateRideViewModel: ObservableObject {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] value in
                 guard let self = self else { return }
-                print("slalaslsal  \(value)")
                 self.currentPosition = CLLocationCoordinate2D(latitude: value.coordinate.latitude,
                                                              longitude: value.coordinate.longitude)
 //                if !self.isStart {
