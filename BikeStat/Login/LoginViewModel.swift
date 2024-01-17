@@ -12,8 +12,6 @@ final class LoginViewModel: ObservableObject {
     var coordinator: MainCoordinatorProtocol?
     let userDefaults: UserDefaults
     let realmService: RealmServiceProtocol
-    var rightlogin = "UserLogin"
-    var rightpassword = "UserPassword"
 
     private var subscriptions = Set<AnyCancellable>()
     
@@ -35,7 +33,6 @@ final class LoginViewModel: ObservableObject {
     
     func checkPassword() {
         let user = realmService.filterUser(login, password)
-        print("s,alaslsa  \(user)")
         if user == 1 {
             self.isError = false
             UserDefaults.standard.set(true, forKey: "isAuth")

@@ -44,6 +44,7 @@ class RealmService: RealmServiceProtocol {
         return users
     }
     
+    @discardableResult
     func saveRideData(_ data: RideData) -> Results<RideRealmData>? {
         let realm = try! Realm()
         var object = RideRealmData()

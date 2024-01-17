@@ -32,7 +32,7 @@ final class ChartsViewModel: ObservableObject {
     private func getData() {
         displayData = self.realmService.getRideData().map {
             return DisplayChartData(distance: Int($0.distance), speed: $0.middleSpeed,
-                                        time: NSDate(), dueation: $0.duration)
+                                    time: $0.rideTime as NSDate, dueation: $0.duration)
         }
     }
 }

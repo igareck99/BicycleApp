@@ -35,6 +35,7 @@
 		8B44F1AC2B4CB41500DADFF9 /* ChartsViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B44F1AB2B4CB41500DADFF9 /* ChartsViewAssembly.swift */; };
 		8B44F1AE2B4CB72000DADFF9 /* DisplayChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B44F1AD2B4CB72000DADFF9 /* DisplayChartData.swift */; };
 		8B44F1B02B4CB9A100DADFF9 /* ChartsDisplayType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B44F1AF2B4CB9A100DADFF9 /* ChartsDisplayType.swift */; };
+		8B795FBD2B574E4F002EDF58 /* HistorySheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B795FBC2B574E4F002EDF58 /* HistorySheetView.swift */; };
 		8B7A6B9E2B4099A6005ABECD /* BikeStatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7A6B9D2B4099A6005ABECD /* BikeStatApp.swift */; };
 		8B7A6BA22B4099A7005ABECD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B7A6BA12B4099A7005ABECD /* Assets.xcassets */; };
 		8B7A6BA52B4099A7005ABECD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B7A6BA42B4099A7005ABECD /* Preview Assets.xcassets */; };
@@ -94,6 +95,7 @@
 		8B44F1AB2B4CB41500DADFF9 /* ChartsViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewAssembly.swift; sourceTree = "<group>"; };
 		8B44F1AD2B4CB72000DADFF9 /* DisplayChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayChartData.swift; sourceTree = "<group>"; };
 		8B44F1AF2B4CB9A100DADFF9 /* ChartsDisplayType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsDisplayType.swift; sourceTree = "<group>"; };
+		8B795FBC2B574E4F002EDF58 /* HistorySheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorySheetView.swift; sourceTree = "<group>"; };
 		8B7A6B9A2B4099A6005ABECD /* BikeStat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikeStat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B7A6B9D2B4099A6005ABECD /* BikeStatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeStatApp.swift; sourceTree = "<group>"; };
 		8B7A6BA12B4099A7005ABECD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 				8BA1725B2B4A0C8800908FA1 /* HistoryAssembly.swift */,
 				8BA1725F2B4A0E6C00908FA1 /* HistoryCellView.swift */,
 				8BA172612B4A0E7700908FA1 /* HistoryCellViewModel.swift */,
+				8B795FBC2B574E4F002EDF58 /* HistorySheetView.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -515,6 +518,7 @@
 				8B44F1AE2B4CB72000DADFF9 /* DisplayChartData.swift in Sources */,
 				8BACF1EA2B48A29800255B0B /* TimeInterval+Extension.swift in Sources */,
 				8B7A6B9E2B4099A6005ABECD /* BikeStatApp.swift in Sources */,
+				8B795FBD2B574E4F002EDF58 /* HistorySheetView.swift in Sources */,
 				8BACF1D42B4781A200255B0B /* HistoryTemplateCellView.swift in Sources */,
 				8B2FA9952B44E06F00BB94DF /* MapViewModel.swift in Sources */,
 				8BACF1D82B47864D00255B0B /* TemplateRoute.swift in Sources */,

@@ -23,6 +23,7 @@ final class MapViewModel: ObservableObject {
     private var counts: Int = 0
     private var timeSeconds: TimeInterval = 0
     private var mediumSpeed = 0.0
+    private var startTime: Date = Date()
     var coordinator: MainCoordinatorProtocol?
     private var subscriptions = Set<AnyCancellable>()
     
@@ -40,9 +41,11 @@ final class MapViewModel: ObservableObject {
         let timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { timer in
             if !self.isStart {
                 return
+            } else {
+                print("slaslksak  \(self.isStart)")
+                self.timeSeconds += self.isStart ? timer.timeInterval : 0
+                self.timeString =  self.timeSeconds.hourMinuteSecond
             }
-            self.timeSeconds += timer.timeInterval
-            self.timeString =  self.timeSeconds.hourMinuteSecond
         })
     }
     
@@ -62,12 +65,10 @@ final class MapViewModel: ObservableObject {
                                averageValue: p["avg"] ?? 0,
                                maxValue: p["max"] ?? 0)
             if let pulse = pulse {
-                print("saslaslaslk")
                 let data = RideData(distance: distance, duration: timeSeconds, middleSpeed: mediumSpeed,
                                     minPulse: pulse.minValue, middlePulse: pulse.averageValue,
-                                    maxPulse: pulse.maxValue, countedDiff: 1, realDiff: 1, startLongtitued: currentPosition.longitude, startLattitude: currentPosition.latitude, endLongtitude: currentPosition.longitude, endLattitude: currentPosition.latitude)
+                                    maxPulse: pulse.maxValue, countedDiff: 1, realDiff: 1, startLongtitued: currentPosition.longitude, startLattitude: currentPosition.latitude, endLongtitude: currentPosition.longitude, endLattitude: currentPosition.latitude, rideTime: startTime)
                 realmService.saveRideData(data)
-                print("slaslaskl  \(realmService.getRideData())")
             }
         }
     }
@@ -78,6 +79,8 @@ final class MapViewModel: ObservableObject {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] value in
                 if value {
+                    self?.startTime = Date()
+                    print("sklasklsakl  \(self?.startTime)")
                     self?.fire()
                 }
                 

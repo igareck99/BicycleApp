@@ -19,6 +19,7 @@ class RideRealmData: Object {
     @Persisted var startLattitude: Double
     @Persisted var endLongtitude: Double
     @Persisted var endLattitude: Double
+    @Persisted var rideTime: Date
 }
 
 // MARK: - RideData
@@ -38,4 +39,5 @@ struct RideData: Identifiable {
     var startLattitude: Double
     var endLongtitude: Double
     var endLattitude: Double
+    var rideTime: Date
 }

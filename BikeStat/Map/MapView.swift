@@ -22,6 +22,7 @@ struct MapView: View {
                 if !viewModel.isStart {
                     viewModel.isStart.toggle()
                 } else {
+                    viewModel.isStart = false
                     viewModel.computeResult()
                 }
             }

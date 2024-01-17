@@ -31,7 +31,6 @@ final class MainCoordinator<Router: MainRouterProtocol>: Coordinator {
         self.router = router
         self.renderView = renderView
         self.userDefaults = userDefaults
-        self.initData()
     }
     
     func start() {
@@ -55,6 +54,7 @@ final class MainCoordinator<Router: MainRouterProtocol>: Coordinator {
 extension MainCoordinator: MainCoordinatorProtocol {
 
     func onMainTabScreen() {
+        router.resetPath()
         router.onMainView(self)
     }
 

@@ -20,7 +20,6 @@ struct LoginView: View {
     
     var body: some View {
         content
-            .toolbar(.hidden, for: .navigationBar)
     }
     
     private var content: some View {

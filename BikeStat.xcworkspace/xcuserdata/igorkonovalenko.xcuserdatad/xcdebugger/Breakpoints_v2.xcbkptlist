@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "8BD350BE-76E5-4E33-B1AD-AEC3B98630C0"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C777D5DD-6ADB-4244-BBB5-C64AAC07D0BF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BikeStat/Realm/RideData.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "RideRealmData"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "C777D5DD-6ADB-4244-BBB5-C64AAC07D0BF - 7d9068a63857d71c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of BikeStat.RideRealmData.realDiff : Swift.Int"
+                  moduleName = "BikeStat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/igorkonovalenko/Documents/BikeStat/BikeStat/Realm/RideData.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "C777D5DD-6ADB-4244-BBB5-C64AAC07D0BF - 32bc02d2521b9276"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BikeStat.RideRealmData.realDiff.getter : Swift.Int"
+                  moduleName = "BikeStat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/igorkonovalenko/Documents/BikeStat/BikeStat/Realm/RideData.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "C777D5DD-6ADB-4244-BBB5-C64AAC07D0BF - 822445e14bab481d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BikeStat.RideRealmData.realDiff.setter : Swift.Int"
+                  moduleName = "BikeStat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/igorkonovalenko/Documents/BikeStat/BikeStat/Realm/RideData.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "C777D5DD-6ADB-4244-BBB5-C64AAC07D0BF - 4d8ded08091770c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BikeStat.RideRealmData.realDiff.modify : Swift.Int"
+                  moduleName = "BikeStat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/igorkonovalenko/Documents/BikeStat/BikeStat/Realm/RideData.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "C777D5DD-6ADB-4244-BBB5-C64AAC07D0BF - b5f46282e726fec7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BikeStat.RideRealmData.realDiff.modify : Swift.Int with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "BikeStat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/igorkonovalenko/Documents/BikeStat/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -19,6 +19,8 @@ protocol MainRouterProtocol: View {
     
     func onTemplateRideView(_ template: TemplateRouteEnum,
                             _ coordinator: MainCoordinatorProtocol)
+    
+    func resetPath()
 }
 
 struct MainRouter<
@@ -49,6 +51,7 @@ struct MainRouter<
 extension MainRouter: MainRouterProtocol {
 
     func onMainView(_ coordinator: MainCoordinatorProtocol) {
+        state.path = NavigationPath()
         state.path.append(BaseContentLink.tabView(coordinator))
     }
     
@@ -67,5 +70,10 @@ extension MainRouter: MainRouterProtocol {
     func onTemplateRideView(_ template: TemplateRouteEnum,
                             _ coordinator: MainCoordinatorProtocol) {
         state.path.append(BaseContentLink.templateRideView(coordinator, template))
+    }
+    
+    func resetPath() {
+        state.path = NavigationPath()
+        print("slasklask  \(state.path)")
     }
 }

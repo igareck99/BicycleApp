@@ -10,7 +10,6 @@ struct MainView: View {
     
     var body: some View {
         content
-            .toolbar(.hidden, for: .navigationBar)
     }
     
     private var content: some View {
@@ -28,5 +27,6 @@ struct MainView: View {
                     Label("Статистика", systemImage: "chart.xyaxis.line")
                 }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
