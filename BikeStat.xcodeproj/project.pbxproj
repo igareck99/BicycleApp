@@ -230,7 +230,7 @@
 		8B2FA9B22B44E23600BB94DF /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				8B44F1A62B4CB3F400DADFF9 /* ChatView */,
+				8B44F1A62B4CB3F400DADFF9 /* ChartsView */,
 				8BACF1E02B4845EF00255B0B /* TempaleRideView */,
 				8BACF1DD2B478B5E00255B0B /* TemplateView */,
 				8BACF1D22B47819100255B0B /* History */,
@@ -242,14 +242,14 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		8B44F1A62B4CB3F400DADFF9 /* ChatView */ = {
+		8B44F1A62B4CB3F400DADFF9 /* ChartsView */ = {
 			isa = PBXGroup;
 			children = (
 				8B44F1A72B4CB3FD00DADFF9 /* ChartsView.swift */,
 				8B44F1A92B4CB40D00DADFF9 /* ChartsViewModel.swift */,
 				8B44F1AB2B4CB41500DADFF9 /* ChartsViewAssembly.swift */,
 			);
-			path = ChatView;
+			path = ChartsView;
 			sourceTree = "<group>";
 		};
 		8B7A6B912B4099A6005ABECD = {
