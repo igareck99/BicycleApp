@@ -30,14 +30,3 @@ struct HistoryTemplateCellView: View {
         .frame(height: 120)
     }
 }
-
-//#Preview {
-//    HistoryCellView(viewModel: HistoryCellViewModel(startingPoint: CLLocationCoordinate2D(
-//        latitude: 50.43379468463272,
-//        longitude: 36.90968073273896
-//    ),
-//                                         endPoint: CLLocationCoordinate2D(
-//                                            latitude: 50.42219,
-//                                            longitude: 36.897025
-//                                         )))
-//}

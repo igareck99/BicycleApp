@@ -42,7 +42,6 @@ final class MapViewModel: ObservableObject {
             if !self.isStart {
                 return
             } else {
-                print("slaslksak  \(self.isStart)")
                 self.timeSeconds += self.isStart ? timer.timeInterval : 0
                 self.timeString =  self.timeSeconds.hourMinuteSecond
             }
@@ -80,7 +79,6 @@ final class MapViewModel: ObservableObject {
             .sink { [weak self] value in
                 if value {
                     self?.startTime = Date()
-                    print("sklasklsakl  \(self?.startTime)")
                     self?.fire()
                 }
                 

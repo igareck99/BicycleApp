@@ -35,6 +35,7 @@
 		8B44F1AC2B4CB41500DADFF9 /* ChartsViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B44F1AB2B4CB41500DADFF9 /* ChartsViewAssembly.swift */; };
 		8B44F1AE2B4CB72000DADFF9 /* DisplayChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B44F1AD2B4CB72000DADFF9 /* DisplayChartData.swift */; };
 		8B44F1B02B4CB9A100DADFF9 /* ChartsDisplayType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B44F1AF2B4CB9A100DADFF9 /* ChartsDisplayType.swift */; };
+		8B6EE10A2B626047004614C1 /* MKMultiPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6EE1092B626047004614C1 /* MKMultiPoint.swift */; };
 		8B795FBD2B574E4F002EDF58 /* HistorySheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B795FBC2B574E4F002EDF58 /* HistorySheetView.swift */; };
 		8B7A6B9E2B4099A6005ABECD /* BikeStatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7A6B9D2B4099A6005ABECD /* BikeStatApp.swift */; };
 		8B7A6BA22B4099A7005ABECD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B7A6BA12B4099A7005ABECD /* Assets.xcassets */; };
@@ -95,6 +96,7 @@
 		8B44F1AB2B4CB41500DADFF9 /* ChartsViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewAssembly.swift; sourceTree = "<group>"; };
 		8B44F1AD2B4CB72000DADFF9 /* DisplayChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayChartData.swift; sourceTree = "<group>"; };
 		8B44F1AF2B4CB9A100DADFF9 /* ChartsDisplayType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsDisplayType.swift; sourceTree = "<group>"; };
+		8B6EE1092B626047004614C1 /* MKMultiPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMultiPoint.swift; sourceTree = "<group>"; };
 		8B795FBC2B574E4F002EDF58 /* HistorySheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorySheetView.swift; sourceTree = "<group>"; };
 		8B7A6B9A2B4099A6005ABECD /* BikeStat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikeStat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B7A6B9D2B4099A6005ABECD /* BikeStatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeStatApp.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				8BACF1CD2B4612D900255B0B /* ButtonView.swift */,
 				8BACF1E72B485B6900255B0B /* CustomTextView.swift */,
 				8BACF1E92B48A29800255B0B /* TimeInterval+Extension.swift */,
+				8B6EE1092B626047004614C1 /* MKMultiPoint.swift */,
 			);
 			path = CustomCumponents;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				8B2FA9B32B44E24000BB94DF /* MainView.swift */,
 				8B2FA9B52B44E24C00BB94DF /* MainViewModel.swift */,
 				8B2FA9B72B44E25900BB94DF /* MainViewAssembly.swift */,
+				8B2FA9912B44E05800BB94DF /* Map */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -280,7 +284,6 @@
 				8B2FA9A22B44E0E100BB94DF /* CustomCumponents */,
 				8B2FA99B2B44E0A200BB94DF /* AppCoordinator */,
 				8B2FA9962B44E07700BB94DF /* Service */,
-				8B2FA9912B44E05800BB94DF /* Map */,
 				8B2FA98C2B44E03600BB94DF /* Models */,
 				8B2FA9852B44E00800BB94DF /* Login */,
 				8B7A6B9D2B4099A6005ABECD /* BikeStatApp.swift */,
@@ -493,6 +496,7 @@
 				8B2FA99A2B44E09800BB94DF /* RequestService.swift in Sources */,
 				8B2FA9892B44E01D00BB94DF /* LoginViewModel.swift in Sources */,
 				8B2FA9A42B44E0FD00BB94DF /* View+Extension.swift in Sources */,
+				8B6EE10A2B626047004614C1 /* MKMultiPoint.swift in Sources */,
 				8BACF1CC2B46124100255B0B /* RideViewAssembly.swift in Sources */,
 				8BACF1DA2B478A1200255B0B /* TemplatesView.swift in Sources */,
 				8BACF1DF2B478C6200255B0B /* TemplateViewAssembly.swift in Sources */,

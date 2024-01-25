@@ -1,9 +1,15 @@
 import SwiftUI
 
+// MARK: - TemplatesView
+
 struct TemplatesView: View {
     
+    // MARK: - Internal Properties
+
     @StateObject var viewModel: TemplatesViewModel
     
+    // MARK: - Body
+
     var body: some View {
         List {
             ForEach(viewModel.items, id: \.self) { value in

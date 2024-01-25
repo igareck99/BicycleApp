@@ -60,3 +60,10 @@ enum TemplateRouteEnum: CaseIterable {
         }
     }
 }
+
+
+struct WayTestStruct: Hashable {
+    
+    var startPoint: CGFloat
+    var endPoint: CGFloat
+}

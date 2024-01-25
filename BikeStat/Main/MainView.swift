@@ -22,11 +22,14 @@ struct MainView: View {
                 .tabItem {
                     Label("История", systemImage: "list.clipboard")
                 }
+                .navigationBarTitleDisplayMode(.inline)   
             ChartsViewAssembly.build()
                 .tabItem {
                     Label("Статистика", systemImage: "chart.xyaxis.line")
                 }
         }
+        .toolbar(.visible, for: .navigationBar)
+        .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true)
     }
 }

@@ -26,6 +26,7 @@ struct HistoryCellView: View {
                 Text("Максимальный пульс \(viewModel.template.maxPulse)")
                 Text("Пройденный путь \(Int(viewModel.template.distance)) метров")
                 Text("Рассчетная сложность: \(viewModel.getCountableLevel())")
+                Text("Средняя скорость: \(String(format: "%.2f", viewModel.template.middleSpeed) + "км / ч")")
                 Text("Реальная сложность: \(viewModel.getLevel())")
                 Text("Время поездки \(viewModel.template.duration.hourMinuteSecond)")
                 Text("\(viewModel.template.rideTime)")

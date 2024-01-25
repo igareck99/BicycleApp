@@ -12,19 +12,19 @@ struct TemplateRideView: View {
             Map(interactionModes: [.all]) {
                 Marker("Start", coordinate: viewModel.data.startPoint)
                 Marker("End", coordinate: viewModel.data.endPoint)
+                if let route = viewModel.route {
+                    MapPolyline(route)
+                        .stroke(.green, lineWidth: 4)
+                }
                 Annotation(
-                    "Sign-in",
+                    "",
                     coordinate: viewModel.currentPosition,
                     anchor: .bottom
                 ) {
                     Image(systemName: "bicycle")
                         .padding(4)
-                        .foregroundStyle(.red)
+                        .foregroundStyle(.blue)
                         .cornerRadius(4)
-                }
-                if let route = viewModel.route {
-                    MapPolyline(route)
-                        .stroke(.green, lineWidth: 4)
                 }
             }
             .frame(height: UIScreen.main.bounds.width)
@@ -34,14 +34,29 @@ struct TemplateRideView: View {
     }
     
     private var labels: some View {
-        VStack(spacing: 8) {
+        VStack(spacing: 12) {
             ButtonView(title: viewModel.isStart ? "Завершить поездку" : "Начать", colors: [.blue, .blue]) {
                 if !viewModel.isStart {
-                    viewModel.isStart = true
+                    viewModel.isStart.toggle()
                 } else {
-                    
+                    viewModel.isStart = false
+                    viewModel.computeResult()
                 }
             }
+            HStack(spacing: 16) {
+                CurrencyView(width: (UIScreen.main.bounds.width - 48) / 2,
+                             height: 44, backgroundColor: .white,
+                             title: viewModel.timeString,
+                             foregroundColor: .black)
+                CurrencyView(width: (UIScreen.main.bounds.width - 48) / 2,
+                             height: 44, backgroundColor: .white,
+                             title: viewModel.speedString + " км/ч",
+                             foregroundColor: .black)
+            }
+            CurrencyView(width: (UIScreen.main.bounds.width - 48) / 2,
+                         height: 44, backgroundColor: .white,
+                         title: String(Int(viewModel.distance)) + " метров",
+                         foregroundColor: .black)
         }
     }
 }
